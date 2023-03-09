@@ -1,0 +1,154 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<section class="sec_pro">
+  <div class="pro_header">
+    <div class="kk" style="scale: 0.9">
+      <div><h1 class="title_head" style="font-size: 34pt">STEGANOGRAPHY</h1></div>
+      <div class="flexclass" id="flexdir">
+        <div>
+          <div class="boxshadow"><h1>Encryption</h1></div>
+          <br />
+          <div class="boxshadow">
+            <table>
+              <tr>
+                <th>Hide Text</th>
+              </tr>
+              <tr>
+                <td>
+                  <p>Hide This Text:</p>
+                  <form name="search">
+                    <textarea
+                      rows="7"
+                      cols="71"
+                      id="HidingText"
+                      placeholder="Input text here..."
+                    ></textarea>
+                  </form>
+                  <p>
+                    Size: <span id="SizeOfText">____</span> symbols
+                    <em
+                      ><span id="MaxSizeOfText"></span><span id="chLeft"></span
+                    ></em>
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    In This Image:
+                    <input
+                      type="file"
+                      multiple="false"
+                      accept="image/*"
+                      id="FrontFile2"
+                      onchange="loadFrontImage2()"
+                    />
+                  </p>
+                  <canvas
+                    style="max-width: 300px; max-height: 300px"
+                    id="CanFront2"
+                  ></canvas>
+                  <p id="SizeOfFrontImage2">Size: ____×____</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input
+                    type="button"
+                    value="Hide Text"
+                    onclick="HideText()"
+                    id="greenbutton"
+                  /><br /><br />
+                  <canvas
+                    style="max-width: 300px; max-height: 300px"
+                    id="CanOutput2"
+                  ></canvas
+                  ><br />
+                  <p id="SizeOfOutputImage2"></p>
+                  <button onclick="downloadImage()">
+                    Download Encoded Image
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input
+                    type="button"
+                    value="Reset"
+                    onclick="Reset2()"
+                    id="whitebutton"
+                  />
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div>
+          <div class="boxshadow"><h1>Decryption</h1></div>
+          <br />
+          <div class="boxshadow">
+            <table>
+              <tr>
+                <th>Extract Text</th>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    Image With Secret Text:
+                    <input
+                      type="file"
+                      multiple="false"
+                      accept="image/*"
+                      id="FileWithSecret2"
+                      onchange="loadImageWithSecret2()"
+                    />
+                  </p>
+                  <canvas
+                    style="max-width: 300px; max-height: 300px"
+                    class="deci"
+                    id="CanWithSecret2"
+                  ></canvas>
+                  <p id="SizeOfImageWithSecret2">Size: ____×____</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input
+                    type="button"
+                    value="Extract"
+                    onclick="ExtractText()"
+                    id="greenbutton"
+                  /><br /><br />
+                  <textarea
+                    rows="7"
+                    cols="71"
+                    id="ExtractedText"
+                    placeholder="Secret text will be here..."
+                    readonly="true"
+                  ></textarea>
+                  <p id="SizeOfExtractedText"></p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input
+                    type="button"
+                    value="Reset"
+                    onclick="Reset4()"
+                    id="whitebutton"
+                  />
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+<script
+  type="text/javascript"
+  src="{% static 'js/DukeSimpleImage.js' %}"
+></script>
+
+{% endblock %}

@@ -1,0 +1,151 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<section class="sec_pro">
+  <div class="pro_header">
+    <div class="kk" style="scale: 0.9">
+      <div>
+        <h1 class="title_head" style="font-size: 34pt">IMAGE STEGANOGRAPHY</h1>
+      </div>
+      <div class="flexclass" id="flexdir">
+        <div>
+          <div class="boxshadow"><h1>Encryption</h1></div>
+          <br />
+          <div class="boxshadow">
+            <table>
+              <tr>
+                <th>Hide Image</th>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    Hide This Image:
+                    <input
+                      type="file"
+                      multiple="false"
+                      accept="image/*"
+                      id="HidingFile"
+                      onchange="loadHidingImage()"
+                    />
+                  </p>
+                  <canvas
+                    style="max-width: 300px; max-height: 300px"
+                    id="CanHide"
+                  ></canvas>
+                  <p id="SizeOfHidingImage">Size: ____×____</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    In This Image:
+                    <input
+                      type="file"
+                      multiple="false"
+                      accept="image/*"
+                      id="FrontFile1"
+                      onchange="loadFrontImage1()"
+                    />
+                  </p>
+                  <canvas
+                    style="max-width: 300px; max-height: 300px"
+                    id="CanFront1"
+                  ></canvas>
+                  <p id="SizeOfFrontImage1">Size: ____×____</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input
+                    type="button"
+                    value="Hide Image"
+                    onclick="HideImage()"
+                    id="greenbutton"
+                  /><br /><br />
+                  <canvas
+                    style="max-width: 300px; max-height: 300px"
+                    id="CanOutput1"
+                  ></canvas
+                  ><br />
+                  <p id="SizeOfOutputImage1"></p>
+                  <button onclick="downloadImages()">
+                    Download Encoded Image
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input
+                    type="button"
+                    value="Reset"
+                    onclick="Reset1()"
+                    id="whitebutton"
+                  />
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div>
+          <div class="boxshadow"><h1>Decryption</h1></div> <br>
+          <div class="boxshadow">
+            <table>
+              <tr>
+                <th>Extract Image</th>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    Image With Secret Image:
+                    <input
+                      type="file"
+                      multiple="false"
+                      accept="image/*"
+                      id="FileWithSecret1"
+                      onchange="loadImageWithSecret1()"
+                    />
+                  </p>
+                  <canvas
+                    style="max-width: 300px; max-height: 300px"
+                    id="CanWithSecret1"
+                  ></canvas>
+                  <p id="SizeOfImageWithSecret1">Size: ____×____</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input
+                    type="button"
+                    value="Extract"
+                    onclick="ExtractImage()"
+                    id="greenbutton"
+                  /><br /><br />
+                  <canvas
+                    style="max-width: 300px; max-height: 300px"
+                    id="CanExtract"
+                  ></canvas>
+                  <p id="SizeOfSecretImage"></p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input
+                    type="button"
+                    value="Reset"
+                    onclick="Reset3()"
+                    id="whitebutton"
+                  />
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+<script
+  type="text/javascript"
+  src="{% static 'js/DukeSimpleImage.js' %}"
+></script>
+
+{% endblock %}

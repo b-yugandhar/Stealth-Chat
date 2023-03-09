@@ -1,0 +1,246 @@
+/* Reset default margins and paddings */
+
+
+/* Style the header */
+.pro_header h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+
+
+/* Style the main container */
+.kk {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+}
+.title_head {
+  color: crimson;
+}
+.boxshadow{
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+
+}
+/* Style the textareas */
+textarea {
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  background-color: #f2f2f2;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  resize: none;
+}
+
+/* Style the buttons */
+.pro_header input[type="button"] {
+  background-color: #0077cc;
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#redbutton {
+  background-color: #FF5733;
+}
+
+#whitebutton {
+  background-color: #fff;
+  border: 1px solid #0066b2;
+  color: #0077cc;
+}
+
+/* Style the links */
+.pro_header a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+.pro_header a:hover {
+  text-decoration: underline;
+}
+
+/* Style the table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th {
+  background-color: #0077cc;
+  color: white;
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+table td {
+  padding: 1rem;
+  vertical-align: top;
+}
+
+/* Style the canvas */
+canvas {
+  border: 1px solid #0077cc;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Style the size indicator */
+p#SizeOfText,
+p#SizeOfFrontImage2,
+p#SizeOfOutputImage2,
+p#SizeOfImageWithSecret2,
+p#SizeOfExtractedText {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+/* Style the warning message */
+p#MaxSizeOfText {
+  color: red;
+  font-style: italic;
+}
+
+/* Style the footer */
+footer {
+  text-align: center;
+  font-size: 0.8rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #777;
+}
+/* Style the footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* Style the links in the footer */
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Style the hover effect for links in the footer */
+footer a:hover {
+  color: #aaa;
+}
+  
+.pro_header button {
+  background-color: #0077cc;
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pro_header button:hover {
+  opacity: 0.8;
+}
+
+.pro_header button.download {
+  background-color: #0077cc;
+  color: white;
+}
+
+#flexdir{
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+.pro_headers{
+  display: flex;
+  max-width: 1200px;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  height: 80vh;
+  background-image: url('static/images/singimg.png');
+}
+
+@media only screen and (max-width:600px){
+
+  #flexdir{
+  flex-direction: column;
+
+}
+.pro_header div {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 500px;
+  padding: 10px;
+
+}
+.pro_headers{
+  flex-direction: column;
+}
+}
+#CanFront2{
+  display: none;
+}
+
+
+.ecrypt_img{
+  flex-basis: 50%;
+  position: relative;
+  text-align: center;
+  
+}
+.pro_img{
+  max-width: 400px;
+  max-height: 400px;
+  border-radius: 10px;
+  position: relative;
+}
+#proland_btn {
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  width: 40%;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  text-decoration: none;
+  position: relative;
+  top: 30px;
+  
+}
+
+
+#proland_btn:hover {
+  background-color: #0066b2;
+}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<section class="pro_section">
+  <div class="pro_headers">
+    <div class="ecrypt_img gg">
+        
+      <div class="pro_div"><img class="pro_img" src="{% static 'images/homeimg.png' %}" alt="" /></div>
+      <div> <a id="proland_btn" href="/imgstego">Hide Image</a></div>
+    </div>
+
+    <div class="ecrypt_img ">
+        <div></div>
+      <div class="pro_div"><img class="pro_img" src="{% static 'images/homeimg.png' %}" alt="" /></div>
+      <div style="text-align: center;"><a id="proland_btn" href="/project">Hide Text</a></div>
+    </div>
+  </div>
+</section>
+{% endblock %}
